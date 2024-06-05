@@ -14,8 +14,6 @@ export default async function editTask(note: Note) {
     if (!response.ok) {
       throw new Error("Error al editar la tarea");
     }
-
-    console.log(await response.json());
   } catch (error) {
     console.error("There was an error:", error);
     throw error;

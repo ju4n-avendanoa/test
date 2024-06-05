@@ -14,7 +14,6 @@ export default async function createTask(description: string) {
     }
 
     const note = await response.json();
-    console.log(note);
     return note;
   } catch (error) {
     console.error("There was an error:", error);

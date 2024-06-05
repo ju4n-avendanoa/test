@@ -14,6 +14,9 @@ export default async function archiveTask(note: Note) {
     if (!response.ok) {
       throw new Error("Error al editar la tarea");
     }
+
+    const updatedNote: Note = await response.json();
+    return updatedNote;
   } catch (error) {
     console.error("There was an error:", error);
     throw error;
