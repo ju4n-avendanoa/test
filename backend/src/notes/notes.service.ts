@@ -20,12 +20,7 @@ export class NotesService {
     return notes;
   }
 
-  async findOne(id: string) {
-    return `This action returns a #${id} note`;
-  }
-
   async update(id: string, updateNoteDto: UpdateNoteDto) {
-    console.log(updateNoteDto);
     const updatedNote = await this.prisma.note.update({
       where: {
         id,
